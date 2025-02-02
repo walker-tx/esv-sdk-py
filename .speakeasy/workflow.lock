@@ -13,7 +13,7 @@ targets:
         sourceRevisionDigest: sha256:6d682808db46836b6b8f15c1c3d1efe281babab94fae33d5668d772e61cfb489
         sourceBlobDigest: sha256:40c6ad832e98a0f34e24aea90700c770ad62a0bb5f9313bd51f1183e6c11a45f
         codeSamplesNamespace: esv-oas-python-code-samples
-        codeSamplesRevisionDigest: sha256:54b3136029ba7bf1e123e2d5e85018a9f2056e4e32ec8297a5a7b79971f9a46c
+        codeSamplesRevisionDigest: sha256:9fba3eb73278445838f46e0b98940c1ffdd6a49ccf1d1dc09952c3f2c4d25bdc
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -27,6 +27,9 @@ workflow:
         esv:
             target: python
             source: Esv-OAS
+            publish:
+                pypi:
+                    token: $pypi_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/walker/esv/esv-oas-python-code-samples

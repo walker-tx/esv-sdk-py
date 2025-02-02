@@ -1,6 +1,6 @@
 # esv-sdk
 
-Developer-friendly & type-safe Python SDK specifically catered to leverage *esv-sdk* API.
+Developer-friendly & type-safe Python SDK specifically catered to leverage *Esv.org* API.
 
 <div align="left">
     <a href="https://www.speakeasy.com/?utm_source=esv-sdk&utm_campaign=python"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
@@ -49,10 +49,6 @@ For more information about the API: [ESV API Website](https://api.esv.org/)
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-> [!TIP]
-> To finish publishing your SDK to PyPI you must [run your first generation action](https://www.speakeasy.com/docs/github-setup#step-by-step-guide).
-
-
 > [!NOTE]
 > **Python version upgrade policy**
 >
@@ -65,7 +61,7 @@ The SDK can be installed with either *pip* or *poetry* package managers.
 *PIP* is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
 
 ```bash
-pip install git+<UNSET>.git
+pip install esv-sdk
 ```
 
 ### Poetry
@@ -73,7 +69,7 @@ pip install git+<UNSET>.git
 *Poetry* is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
 
 ```bash
-poetry add git+<UNSET>.git
+poetry add esv-sdk
 ```
 
 ### Shell and script usage with `uv`
