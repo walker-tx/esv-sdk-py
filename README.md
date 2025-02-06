@@ -1,4 +1,4 @@
-# esv-sdk-py
+# esv-sdk
 
 Developer-friendly & type-safe Python SDK specifically catered to leverage *Esv.org* API.
 
