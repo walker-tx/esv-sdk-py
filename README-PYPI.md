@@ -1,4 +1,7 @@
-# esv-sdk
+# Esv.org Python SDK
+
+> [!IMPORTANT]  
+> This is not an official SDK developed by Esv.org.
 
 Developer-friendly & type-safe Python SDK specifically catered to leverage *Esv.org* API.
 
@@ -24,7 +27,7 @@ For more information about the API: [ESV API Website](https://api.esv.org/)
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [esv-sdk](https://github.com/walker-tx/esv-sdk-py/blob/master/#esv-sdk)
+* [Esv.org Python SDK](https://github.com/walker-tx/esv-sdk-py/blob/master/#esvorg-python-sdk)
   * [SDK Installation](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-installation)
   * [IDE Support](https://github.com/walker-tx/esv-sdk-py/blob/master/#ide-support)
   * [SDK Example Usage](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-example-usage)
