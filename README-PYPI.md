@@ -27,22 +27,22 @@ For more information about the API: [ESV API Website](https://api.esv.org/)
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [esv-sdk](#esv-sdk)
-  * [SDK Installation](#sdk-installation)
-  * [IDE Support](#ide-support)
-  * [SDK Example Usage](#sdk-example-usage)
-  * [Authentication](#authentication)
-  * [Available Resources and Operations](#available-resources-and-operations)
-  * [Pagination](#pagination)
-  * [Retries](#retries)
-  * [Error Handling](#error-handling)
-  * [Server Selection](#server-selection)
-  * [Custom HTTP Client](#custom-http-client)
-  * [Resource Management](#resource-management)
-  * [Debugging](#debugging)
-* [Development](#development)
-  * [Maturity](#maturity)
-  * [Contributions](#contributions)
+* [esv-sdk](https://github.com/walker-tx/esv-sdk-py/blob/master/#esv-sdk)
+  * [SDK Installation](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-installation)
+  * [IDE Support](https://github.com/walker-tx/esv-sdk-py/blob/master/#ide-support)
+  * [SDK Example Usage](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-example-usage)
+  * [Authentication](https://github.com/walker-tx/esv-sdk-py/blob/master/#authentication)
+  * [Available Resources and Operations](https://github.com/walker-tx/esv-sdk-py/blob/master/#available-resources-and-operations)
+  * [Pagination](https://github.com/walker-tx/esv-sdk-py/blob/master/#pagination)
+  * [Retries](https://github.com/walker-tx/esv-sdk-py/blob/master/#retries)
+  * [Error Handling](https://github.com/walker-tx/esv-sdk-py/blob/master/#error-handling)
+  * [Server Selection](https://github.com/walker-tx/esv-sdk-py/blob/master/#server-selection)
+  * [Custom HTTP Client](https://github.com/walker-tx/esv-sdk-py/blob/master/#custom-http-client)
+  * [Resource Management](https://github.com/walker-tx/esv-sdk-py/blob/master/#resource-management)
+  * [Debugging](https://github.com/walker-tx/esv-sdk-py/blob/master/#debugging)
+* [Development](https://github.com/walker-tx/esv-sdk-py/blob/master/#development)
+  * [Maturity](https://github.com/walker-tx/esv-sdk-py/blob/master/#maturity)
+  * [Contributions](https://github.com/walker-tx/esv-sdk-py/blob/master/#contributions)
 
 <!-- End Table of Contents [toc] -->
 
@@ -192,12 +192,12 @@ with Esv(
 <summary>Available methods</summary>
 
 
-### [passages](docs/sdks/passages/README.md)
+### [passages](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md)
 
-* [get_html](docs/sdks/passages/README.md#get_html) - Get Bible passage HTML
-* [search](docs/sdks/passages/README.md#search) - Search Bible passages
-* [get_audio](docs/sdks/passages/README.md#get_audio) - Get Bible passage audio
-* [get_text](docs/sdks/passages/README.md#get_text) - Get Bible passage text
+* [get_html](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md#get_html) - Get Bible passage HTML
+* [search](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md#search) - Search Bible passages
+* [get_audio](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md#get_audio) - Get Bible passage audio
+* [get_text](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md#get_text) - Get Bible passage text
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
