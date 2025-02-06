@@ -1,4 +1,4 @@
-# esv-sdk
+# esv-sdk-py
 
 Developer-friendly & type-safe Python SDK specifically catered to leverage *Esv.org* API.
 
@@ -9,10 +9,7 @@ Developer-friendly & type-safe Python SDK specifically catered to leverage *Esv.
     </a>
 </div>
 
-
 <br /><br />
-> [!IMPORTANT]
-> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/walker/esv). Delete this section before > publishing to a package manager.
 
 <!-- Start Summary [summary] -->
 ## Summary
@@ -27,7 +24,7 @@ For more information about the API: [ESV API Website](https://api.esv.org/)
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [esv-sdk](https://github.com/walker-tx/esv-sdk-py/blob/master/#esv-sdk)
+* [esv-sdk-py](https://github.com/walker-tx/esv-sdk-py/blob/master/#esv-sdk-py)
   * [SDK Installation](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-installation)
   * [IDE Support](https://github.com/walker-tx/esv-sdk-py/blob/master/#ide-support)
   * [SDK Example Usage](https://github.com/walker-tx/esv-sdk-py/blob/master/#sdk-example-usage)
