@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:40c6ad832e98a0f34e24aea90700c770ad62a0bb5f9313bd51f1183e6c11a45f
         tags:
             - latest
-            - speakeasy-sdk-regen-1738810924
+            - speakeasy-sdk-regen-1738819028
 targets:
     esv:
         source: Esv-OAS
@@ -14,7 +14,7 @@ targets:
         sourceRevisionDigest: sha256:6d682808db46836b6b8f15c1c3d1efe281babab94fae33d5668d772e61cfb489
         sourceBlobDigest: sha256:40c6ad832e98a0f34e24aea90700c770ad62a0bb5f9313bd51f1183e6c11a45f
         codeSamplesNamespace: esv-oas-python-code-samples
-        codeSamplesRevisionDigest: sha256:18d27cb0537c95385b9069a125201e5afce32431c127a0197e842738cf715145
+        codeSamplesRevisionDigest: sha256:ebe75dfbf70246dc39ba5cd51c3d36a6422c575e1bf55b411436320e1f295f32
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
