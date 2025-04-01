@@ -3,10 +3,10 @@ id: d27a20a7-f5e6-4642-9d4b-76a92a4d11f2
 management:
   docChecksum: 68a5dff174a4d4f21b279d09f8b73a3e
   docVersion: 1.0.0
-  speakeasyVersion: 1.484.1
-  generationVersion: 2.503.2
-  releaseVersion: 0.1.3
-  configChecksum: 2d06f2aed54a5360ad928698e388162c
+  speakeasyVersion: 1.526.6
+  generationVersion: 2.563.1
+  releaseVersion: 0.2.0
+  configChecksum: 56d8920d9e9e55695e09862df7479481
   repoURL: https://github.com/walker-tx/esv-sdk-py.git
   installationURL: https://github.com/walker-tx/esv-sdk-py.git
   published: true
@@ -14,22 +14,22 @@ features:
   python:
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.10.9
+    core: 5.12.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.3.2
     flattening: 3.1.1
-    globalSecurity: 3.0.2
+    globalSecurity: 3.0.3
     globalSecurityCallbacks: 1.0.0
     globalSecurityFlattening: 1.0.0
     globalServerURLs: 3.1.0
     methodArguments: 1.0.2
     nameOverrides: 3.0.1
-    pagination: 3.0.3
+    pagination: 3.0.4
     responseFormat: 1.0.1
     retries: 3.0.2
-    sdkHooks: 1.0.0
+    sdkHooks: 1.0.1
 generatedFiles:
   - .gitattributes
   - .python-version
@@ -55,7 +55,7 @@ generatedFiles:
   - py.typed
   - pylintrc
   - pyproject.toml
-  - scripts/prepare-readme.py
+  - scripts/prepare_readme.py
   - scripts/publish.sh
   - src/esv_sdk/__init__.py
   - src/esv_sdk/_hooks/__init__.py
