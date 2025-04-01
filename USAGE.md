@@ -4,6 +4,7 @@
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -24,6 +25,7 @@ from esv_sdk import Esv
 import os
 
 async def main():
+
     async with Esv(
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:

@@ -23,6 +23,7 @@ Esv.org API Docs for `/v3/passages/html`
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -81,6 +82,7 @@ Esv.org API Docs for `/v3/passage/search`
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -127,6 +129,7 @@ Esv.org API Docs for `/v3/passage/audio`
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -168,6 +171,7 @@ Esv.org API Docs for `/v3/passages/text`
 ```python
 from esv_sdk import Esv
 import os
+
 
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),

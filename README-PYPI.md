@@ -124,6 +124,7 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -144,6 +145,7 @@ from esv_sdk import Esv
 import os
 
 async def main():
+
     async with Esv(
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:
@@ -172,6 +174,7 @@ To authenticate with the API the `api_key` parameter must be set when initializi
 ```python
 from esv_sdk import Esv
 import os
+
 
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
@@ -214,6 +217,7 @@ Here's an example of one such pagination call:
 from esv_sdk import Esv
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -239,6 +243,7 @@ from esv_sdk import Esv
 from esv_sdk.utils import BackoffStrategy, RetryConfig
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -256,6 +261,7 @@ If you'd like to override the default retry strategy for all operations that sup
 from esv_sdk import Esv
 from esv_sdk.utils import BackoffStrategy, RetryConfig
 import os
+
 
 with Esv(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
@@ -297,6 +303,7 @@ When custom error responses are specified for an operation, the SDK may also rai
 from esv_sdk import Esv, models
 import os
 
+
 with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
@@ -322,10 +329,11 @@ with Esv(
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+The default server can be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 from esv_sdk import Esv
 import os
+
 
 with Esv(
     server_url="https://api.esv.org/v3/",
@@ -432,6 +440,7 @@ The `Esv` class implements the context manager protocol and registers a finalize
 from esv_sdk import Esv
 import os
 def main():
+
     with Esv(
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:
@@ -440,6 +449,7 @@ def main():
 
 # Or when using async:
 async def amain():
+
     async with Esv(
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:
