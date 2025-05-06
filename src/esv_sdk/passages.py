@@ -7,7 +7,7 @@ from esv_sdk.types import OptionalNullable, UNSET
 from esv_sdk.utils import get_security_from_env
 import httpx
 from jsonpath import JSONPath
-from typing import Any, Dict, Mapping, Optional
+from typing import Any, Dict, List, Mapping, Optional, Union
 
 
 class Passages(BaseSDK):
@@ -382,7 +382,7 @@ class Passages(BaseSDK):
         )
 
         def next_func() -> Optional[models.SearchPassagesResponse]:
-            body = utils.unmarshal_json(http_res.text, Dict[Any, Any])
+            body = utils.unmarshal_json(http_res.text, Union[Dict[Any, Any], List[Any]])
             page = request.page if not request.page is None else 1
             next_page = page + 1
 
@@ -510,7 +510,7 @@ class Passages(BaseSDK):
         )
 
         def next_func() -> Optional[models.SearchPassagesResponse]:
-            body = utils.unmarshal_json(http_res.text, Dict[Any, Any])
+            body = utils.unmarshal_json(http_res.text, Union[Dict[Any, Any], List[Any]])
             page = request.page if not request.page is None else 1
             next_page = page + 1
 
