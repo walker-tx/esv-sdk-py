@@ -39,3 +39,13 @@ Based on:
 - [python v0.3.0] .
 ### Releases
 - [PyPI v0.3.0] https://pypi.org/project/esv-sdk/0.3.0 - .
+
+## 2025-05-25 13:20:45
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.551.0 (2.610.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.4.0] .
+### Releases
+- [PyPI v0.4.0] https://pypi.org/project/esv-sdk/0.4.0 - .

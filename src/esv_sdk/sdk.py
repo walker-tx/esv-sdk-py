@@ -7,11 +7,14 @@ from .utils.logger import Logger, get_default_logger
 from .utils.retries import RetryConfig
 from esv_sdk import models, utils
 from esv_sdk._hooks import SDKHooks
-from esv_sdk.passages import Passages
 from esv_sdk.types import OptionalNullable, UNSET
 import httpx
-from typing import Any, Callable, Dict, Optional, Union, cast
+import importlib
+from typing import Any, Callable, Dict, Optional, TYPE_CHECKING, Union, cast
 import weakref
+
+if TYPE_CHECKING:
+    from esv_sdk.passages import Passages
 
 
 class Esv(BaseSDK):
@@ -21,7 +24,10 @@ class Esv(BaseSDK):
     https://api.esv.org/ - ESV API Website
     """
 
-    passages: Passages
+    passages: "Passages"
+    _sub_sdk_map = {
+        "passages": ("esv_sdk.passages", "Passages"),
+    }
 
     def __init__(
         self,
@@ -116,10 +122,32 @@ class Esv(BaseSDK):
             self.sdk_configuration.async_client_supplied,
         )
 
-        self._init_sdks()
+    def __getattr__(self, name: str):
+        if name in self._sub_sdk_map:
+            module_path, class_name = self._sub_sdk_map[name]
+            try:
+                module = importlib.import_module(module_path)
+                klass = getattr(module, class_name)
+                instance = klass(self.sdk_configuration)
+                setattr(self, name, instance)
+                return instance
+            except ImportError as e:
+                raise AttributeError(
+                    f"Failed to import module {module_path} for attribute {name}: {e}"
+                ) from e
+            except AttributeError as e:
+                raise AttributeError(
+                    f"Failed to find class {class_name} in module {module_path} for attribute {name}: {e}"
+                ) from e
 
-    def _init_sdks(self):
-        self.passages = Passages(self.sdk_configuration)
+        raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+
+    def __dir__(self):
+        default_attrs = list(super().__dir__())
+        lazy_attrs = list(self._sub_sdk_map.keys())
+        return sorted(list(set(default_attrs + lazy_attrs)))
 
     def __enter__(self):
         return self
