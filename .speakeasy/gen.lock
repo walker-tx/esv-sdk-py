@@ -3,10 +3,10 @@ id: d27a20a7-f5e6-4642-9d4b-76a92a4d11f2
 management:
   docChecksum: 68a5dff174a4d4f21b279d09f8b73a3e
   docVersion: 1.0.0
-  speakeasyVersion: 1.551.0
-  generationVersion: 2.610.0
-  releaseVersion: 0.4.0
-  configChecksum: 23281b863b255b310e09cc1a5b128368
+  speakeasyVersion: 1.554.1
+  generationVersion: 2.616.1
+  releaseVersion: 0.5.0
+  configChecksum: dbcfca87ced785924c580efde67f7b96
   repoURL: https://github.com/walker-tx/esv-sdk-py.git
   installationURL: https://github.com/walker-tx/esv-sdk-py.git
   published: true
@@ -14,7 +14,7 @@ features:
   python:
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.0
+    core: 5.19.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -29,7 +29,7 @@ features:
     pagination: 3.0.5
     responseFormat: 1.0.1
     retries: 3.0.2
-    sdkHooks: 1.0.1
+    sdkHooks: 1.1.0
 generatedFiles:
   - .gitattributes
   - .python-version
