@@ -129,7 +129,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -150,7 +150,7 @@ async def main():
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:
 
-        res = await esv.passages.get_html_async(query="John 1:1")
+        res = await esv.passages.get_html_async(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
         # Handle response
         print(res)
@@ -180,7 +180,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -222,7 +222,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.search(query="<value>")
+    res = esv.passages.search(query="<value>", page_size=20, page=1)
 
     while res is not None:
         # Handle items
@@ -248,7 +248,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1",
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv",
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
     # Handle response
@@ -268,7 +268,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -310,7 +310,7 @@ with Esv(
     res = None
     try:
 
-        res = esv.passages.get_html(query="John 1:1")
+        res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
         # Handle response
         print(res)
@@ -340,7 +340,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
