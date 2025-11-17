@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 0.4.0
-  configChecksum: 23281b863b255b310e09cc1a5b128368
+  releaseVersion: 0.5.1
+  configChecksum: f03e25d5e93bffd8c15eb3788e716720
   repoURL: https://github.com/walker-tx/esv-sdk-py.git
   installationURL: https://github.com/walker-tx/esv-sdk-py.git
   published: true
@@ -274,6 +274,31 @@ examples:
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
     "":
+      parameters:
+        query:
+          q: "<value>"
+          include-passage-references: true
+          include-verse-numbers: true
+          include-first-verse-numbers: true
+          include-footnotes: true
+          include-footnote-body: true
+          include-headings: true
+          include-short-copyright: false
+          include-copyright: false
+          include-passage-horizontal-lines: false
+          include-heading-horizontal-lines: false
+          horizontal-line-length: 55
+          include-selahs: true
+          include-css-link: true
+          inline-styles: false
+          wrapping-div: true
+          div-classes: "esv"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"code": "<value>", "message": "<value>"}
+    speakeasy-default-get-passage-html:
       parameters:
         query:
           q: "<value>"
@@ -572,6 +597,34 @@ examples:
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
     "":
+      parameters:
+        query:
+          q: "<value>"
+          include-passage-references: true
+          include-verse-numbers: true
+          include-first-verse-numbers: true
+          include-footnotes: true
+          include-footnote-body: true
+          include-headings: true
+          include-short-copyright: false
+          include-copyright: false
+          include-passage-horizontal-lines: false
+          include-heading-horizontal-lines: false
+          horizontal-line-length: 55
+          include-selahs: true
+          indent-using: "space"
+          indent-paragraphs: 2
+          indent-poetry: 2
+          indent-poetry-lines: 4
+          indent-declares: 40
+          indent-psalm-doxology: 30
+          line-length: 0
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"code": "<value>", "message": "<value>"}
+    speakeasy-default-get-passage-text:
       parameters:
         query:
           q: "<value>"
