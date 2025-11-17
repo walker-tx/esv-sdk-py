@@ -15,6 +15,10 @@ permissions:
       set_version:
         description: optionally set a specific SDK version
         type: string
+      skip_versioning:
+        description: Skip versioning
+        type: boolean
+        default: false
   schedule:
     - cron: 0 0 * * *
 jobs:
@@ -24,7 +28,7 @@ jobs:
       force: ${{ github.event.inputs.force }}
       mode: pr
       set_version: ${{ github.event.inputs.set_version }}
-      skip_versioning: true
+      skip_versioning: ${{ github.event.inputs.skip_versioning }}
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       pypi_token: ${{ secrets.PYPI_TOKEN }}
