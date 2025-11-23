@@ -19,6 +19,7 @@ Esv.org API Docs for `/v3/passages/html`
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPassageHtml" method="get" path="/passage/html/" -->
 ```python
 from esv_sdk import Esv
 import os
@@ -28,7 +29,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -78,6 +79,7 @@ Esv.org API Docs for `/v3/passage/search`
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="searchPassages" method="get" path="/passage/search/" -->
 ```python
 from esv_sdk import Esv
 import os
@@ -87,7 +89,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.search(query="<value>")
+    res = esv.passages.search(query="<value>", page_size=20, page=1)
 
     while res is not None:
         # Handle items
@@ -125,6 +127,7 @@ Esv.org API Docs for `/v3/passage/audio`
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPassageAudio" method="get" path="/passage/audio/" -->
 ```python
 from esv_sdk import Esv
 import os
@@ -168,7 +171,9 @@ Esv.org API Docs for `/v3/passages/text`
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPassageText" method="get" path="/passage/text/" -->
 ```python
+import esv_sdk
 from esv_sdk import Esv
 import os
 
@@ -177,7 +182,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_text(query="John 1:1")
+    res = esv.passages.get_text(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, indent_using=esv_sdk.IndentUsing.SPACE, indent_paragraphs=2, indent_poetry=2, indent_poetry_lines=4, indent_declares=40, indent_psalm_doxology=30, line_length=0)
 
     # Handle response
     print(res)
