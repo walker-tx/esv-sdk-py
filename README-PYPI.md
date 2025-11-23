@@ -54,7 +54,15 @@ For more information about the API: [ESV API Website](https://api.esv.org/)
 >
 > Once a Python version reaches its [official end of life date](https://devguide.python.org/versions/), a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum python version supported in the SDK will be updated.
 
-The SDK can be installed with either *pip* or *poetry* package managers.
+The SDK can be installed with *uv*, *pip*, or *poetry* package managers.
+
+### uv
+
+*uv* is a fast Python package installer and resolver, designed as a drop-in replacement for pip and pip-tools. It's recommended for its speed and modern Python tooling capabilities.
+
+```bash
+uv add esv-sdk
+```
 
 ### PIP
 
@@ -129,7 +137,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -137,7 +145,8 @@ with Esv(
 
 </br>
 
-The same SDK client can also be used to make asychronous requests by importing asyncio.
+The same SDK client can also be used to make asynchronous requests by importing asyncio.
+
 ```python
 # Asynchronous Example
 import asyncio
@@ -150,7 +159,7 @@ async def main():
         api_key=os.getenv("ESV_API_KEY", ""),
     ) as esv:
 
-        res = await esv.passages.get_html_async(query="John 1:1")
+        res = await esv.passages.get_html_async(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
         # Handle response
         print(res)
@@ -180,7 +189,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -193,7 +202,6 @@ with Esv(
 
 <details open>
 <summary>Available methods</summary>
-
 
 ### [passages](https://github.com/walker-tx/esv-sdk-py/blob/master/docs/sdks/passages/README.md)
 
@@ -222,7 +230,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.search(query="<value>")
+    res = esv.passages.search(query="<value>", page_size=20, page=1)
 
     while res is not None:
         # Handle items
@@ -248,7 +256,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1",
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv",
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
     # Handle response
@@ -268,7 +276,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
@@ -279,26 +287,18 @@ with Esv(
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Handling errors in this SDK should largely match your expectations. All operations return a response object or raise an exception.
+[`EsvError`](https://github.com/walker-tx/esv-sdk-py/blob/master/./src/esv_sdk/models/esverror.py) is the base class for all HTTP error responses. It has the following properties:
 
-By default, an API error will raise a models.APIError exception, which has the following properties:
-
-| Property        | Type             | Description           |
-|-----------------|------------------|-----------------------|
-| `.status_code`  | *int*            | The HTTP status code  |
-| `.message`      | *str*            | The error message     |
-| `.raw_response` | *httpx.Response* | The raw HTTP response |
-| `.body`         | *str*            | The response content  |
-
-When custom error responses are specified for an operation, the SDK may also raise their associated exceptions. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `get_html_async` method may raise the following exceptions:
-
-| Error Type      | Status Code | Content Type     |
-| --------------- | ----------- | ---------------- |
-| models.Error    | 400, 401    | application/json |
-| models.APIError | 4XX, 5XX    | \*/\*            |
+| Property           | Type             | Description                                                                             |
+| ------------------ | ---------------- | --------------------------------------------------------------------------------------- |
+| `err.message`      | `str`            | Error message                                                                           |
+| `err.status_code`  | `int`            | HTTP response status code eg `404`                                                      |
+| `err.headers`      | `httpx.Headers`  | HTTP response headers                                                                   |
+| `err.body`         | `str`            | HTTP body. Can be empty string if no body is returned.                                  |
+| `err.raw_response` | `httpx.Response` | Raw HTTP response                                                                       |
+| `err.data`         |                  | Optional. Some errors may contain structured data. [See Error Classes](https://github.com/walker-tx/esv-sdk-py/blob/master/#error-classes). |
 
 ### Example
-
 ```python
 from esv_sdk import Esv, models
 import os
@@ -310,18 +310,46 @@ with Esv(
     res = None
     try:
 
-        res = esv.passages.get_html(query="John 1:1")
+        res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
         # Handle response
         print(res)
 
-    except models.Error as e:
-        # handle e.data: models.ErrorData
-        raise(e)
-    except models.APIError as e:
-        # handle exception
-        raise(e)
+
+    except models.EsvError as e:
+        # The base class for HTTP error responses
+        print(e.message)
+        print(e.status_code)
+        print(e.body)
+        print(e.headers)
+        print(e.raw_response)
+
+        # Depending on the method different errors may be thrown
+        if isinstance(e, models.Error):
+            print(e.data.code)  # str
+            print(e.data.message)  # str
+            print(e.data.details)  # Optional[Dict[str, Any]]
 ```
+
+### Error Classes
+**Primary errors:**
+* [`EsvError`](https://github.com/walker-tx/esv-sdk-py/blob/master/./src/esv_sdk/models/esverror.py): The base class for HTTP error responses.
+  * [`Error`](https://github.com/walker-tx/esv-sdk-py/blob/master/./src/esv_sdk/models/error.py): Bad request.
+
+<details><summary>Less common errors (5)</summary>
+
+<br />
+
+**Network errors:**
+* [`httpx.RequestError`](https://www.python-httpx.org/exceptions/#httpx.RequestError): Base class for request errors.
+    * [`httpx.ConnectError`](https://www.python-httpx.org/exceptions/#httpx.ConnectError): HTTP client was unable to make a request to a server.
+    * [`httpx.TimeoutException`](https://www.python-httpx.org/exceptions/#httpx.TimeoutException): HTTP request timed out.
+
+
+**Inherit from [`EsvError`](https://github.com/walker-tx/esv-sdk-py/blob/master/./src/esv_sdk/models/esverror.py)**:
+* [`ResponseValidationError`](https://github.com/walker-tx/esv-sdk-py/blob/master/./src/esv_sdk/models/responsevalidationerror.py): Type mismatch between the response data and the expected Pydantic model. Provides access to the Pydantic validation error via the `cause` attribute.
+
+</details>
 <!-- End Error Handling [errors] -->
 
 <!-- Start Server Selection [server] -->
@@ -340,7 +368,7 @@ with Esv(
     api_key=os.getenv("ESV_API_KEY", ""),
 ) as esv:
 
-    res = esv.passages.get_html(query="John 1:1")
+    res = esv.passages.get_html(query="John 1:1", include_passage_references=True, include_verse_numbers=True, include_first_verse_numbers=True, include_footnotes=True, include_footnote_body=True, include_headings=True, include_short_copyright=False, include_copyright=False, include_passage_horizontal_lines=False, include_heading_horizontal_lines=False, horizontal_line_length=55, include_selahs=True, include_css_link=True, inline_styles=False, wrapping_div=True, div_classes="esv")
 
     # Handle response
     print(res)
