@@ -3,10 +3,10 @@ id: d27a20a7-f5e6-4642-9d4b-76a92a4d11f2
 management:
   docChecksum: 68a5dff174a4d4f21b279d09f8b73a3e
   docVersion: 1.0.0
-  speakeasyVersion: 1.551.0
-  generationVersion: 2.610.0
-  releaseVersion: 0.5.1
-  configChecksum: f03e25d5e93bffd8c15eb3788e716720
+  speakeasyVersion: 1.665.0
+  generationVersion: 2.767.2
+  releaseVersion: 0.6.0
+  configChecksum: b40541239245e08730f3faef689283c7
   repoURL: https://github.com/walker-tx/esv-sdk-py.git
   installationURL: https://github.com/walker-tx/esv-sdk-py.git
   published: true
@@ -14,25 +14,24 @@ features:
   python:
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.0
+    core: 5.23.13
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.3.2
     flattening: 3.1.1
-    globalSecurity: 3.0.3
+    globalSecurity: 3.0.4
     globalSecurityCallbacks: 1.0.0
     globalSecurityFlattening: 1.0.0
-    globalServerURLs: 3.1.1
+    globalServerURLs: 3.2.0
     methodArguments: 1.0.2
     nameOverrides: 3.0.1
-    pagination: 3.0.5
+    pagination: 3.0.7
     responseFormat: 1.0.1
-    retries: 3.0.2
-    sdkHooks: 1.0.1
+    retries: 3.0.3
+    sdkHooks: 1.2.0
 generatedFiles:
   - .gitattributes
-  - .python-version
   - .vscode/settings.json
   - USAGE.md
   - docs/models/error.md
@@ -49,7 +48,6 @@ generatedFiles:
   - docs/models/security.md
   - docs/models/utils/retryconfig.md
   - docs/models/verses.md
-  - docs/sdks/esv/README.md
   - docs/sdks/passages/README.md
   - poetry.toml
   - py.typed
@@ -67,11 +65,14 @@ generatedFiles:
   - src/esv_sdk/models/__init__.py
   - src/esv_sdk/models/apierror.py
   - src/esv_sdk/models/error.py
+  - src/esv_sdk/models/esverror.py
   - src/esv_sdk/models/getpassageaudioop.py
   - src/esv_sdk/models/getpassagehtmlop.py
   - src/esv_sdk/models/getpassagetextop.py
+  - src/esv_sdk/models/no_response_error.py
   - src/esv_sdk/models/passagemeta.py
   - src/esv_sdk/models/passageresponse.py
+  - src/esv_sdk/models/responsevalidationerror.py
   - src/esv_sdk/models/searchpassagesop.py
   - src/esv_sdk/models/security.py
   - src/esv_sdk/passages.py
@@ -94,6 +95,7 @@ generatedFiles:
   - src/esv_sdk/utils/retries.py
   - src/esv_sdk/utils/security.py
   - src/esv_sdk/utils/serializers.py
+  - src/esv_sdk/utils/unmarshal_json_response.py
   - src/esv_sdk/utils/url.py
   - src/esv_sdk/utils/values.py
 examples:
