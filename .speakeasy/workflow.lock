@@ -1,4 +1,4 @@
-speakeasyVersion: 1.551.0
+speakeasyVersion: 1.665.0
 sources:
     Esv-OAS:
         sourceNamespace: esv-org-api
@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:317edf49c614f66a5c2512cdb81bf892475de71a8676771b3b4f04b67cbd0261
         tags:
             - latest
-            - speakeasy-sdk-regen-1748563677
+            - speakeasy-sdk-regen-1763408539
 targets:
     esv:
         source: Esv-OAS
@@ -14,7 +14,7 @@ targets:
         sourceRevisionDigest: sha256:a9b4671498f7d6ee1235ec96141feea04c2ceae57776b4d9db18a53fae2fa7b4
         sourceBlobDigest: sha256:317edf49c614f66a5c2512cdb81bf892475de71a8676771b3b4f04b67cbd0261
         codeSamplesNamespace: esv-oas-python-code-samples
-        codeSamplesRevisionDigest: sha256:bd0a84df90f7f6aff0e3a4bb6ed8f651fb9a4b06a7ed8c8dfe04bb4b3b40fcc9
+        codeSamplesRevisionDigest: sha256:526445165425d3aebc35ee28481eb5871606edb1be44c7ffc8505fa096ae44a2
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
