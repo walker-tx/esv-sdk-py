@@ -3,99 +3,314 @@ id: d27a20a7-f5e6-4642-9d4b-76a92a4d11f2
 management:
   docChecksum: 68a5dff174a4d4f21b279d09f8b73a3e
   docVersion: 1.0.0
-  speakeasyVersion: 1.551.0
-  generationVersion: 2.610.0
-  releaseVersion: 0.5.1
-  configChecksum: f03e25d5e93bffd8c15eb3788e716720
+  speakeasyVersion: 1.788.1
+  generationVersion: 2.915.1
+  releaseVersion: 0.6.0
+  configChecksum: 016073e3f3e9b8665426e2c685ae9d65
   repoURL: https://github.com/walker-tx/esv-sdk-py.git
   installationURL: https://github.com/walker-tx/esv-sdk-py.git
   published: true
+persistentEdits:
+  generation_id: df8259db-d4d1-4846-ac1b-39d8eda21bbc
+  pristine_commit_hash: 428e0bcaa61d64e19d70459451da23d3315c95de
+  pristine_tree_hash: 709435261ac56b8f862dae27824928931118c5e5
 features:
   python:
-    additionalDependencies: 1.0.0
-    constsAndDefaults: 1.0.5
-    core: 5.19.0
+    additionalDependencies: 1.1.0
+    constsAndDefaults: 1.0.7
+    core: 6.0.34
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
-    enumUnions: 0.1.0
-    envVarSecurityUsage: 0.3.2
+    enumUnions: 0.1.1
+    envVarSecurityUsage: 0.3.3
     flattening: 3.1.1
-    globalSecurity: 3.0.3
+    globalSecurity: 3.0.7
     globalSecurityCallbacks: 1.0.0
     globalSecurityFlattening: 1.0.0
-    globalServerURLs: 3.1.1
-    methodArguments: 1.0.2
-    nameOverrides: 3.0.1
-    pagination: 3.0.5
-    responseFormat: 1.0.1
-    retries: 3.0.2
-    sdkHooks: 1.0.1
-generatedFiles:
-  - .gitattributes
-  - .python-version
-  - .vscode/settings.json
-  - USAGE.md
-  - docs/models/error.md
-  - docs/models/getpassageaudiorequest.md
-  - docs/models/getpassagehtmlrequest.md
-  - docs/models/getpassagetextrequest.md
-  - docs/models/indentusing.md
-  - docs/models/passagemeta.md
-  - docs/models/passageresponse.md
-  - docs/models/results.md
-  - docs/models/searchpassagesrequest.md
-  - docs/models/searchpassagesresponse.md
-  - docs/models/searchpassagesresponsebody.md
-  - docs/models/security.md
-  - docs/models/utils/retryconfig.md
-  - docs/models/verses.md
-  - docs/sdks/esv/README.md
-  - docs/sdks/passages/README.md
-  - poetry.toml
-  - py.typed
-  - pylintrc
-  - pyproject.toml
-  - scripts/prepare_readme.py
-  - scripts/publish.sh
-  - src/esv_sdk/__init__.py
-  - src/esv_sdk/_hooks/__init__.py
-  - src/esv_sdk/_hooks/sdkhooks.py
-  - src/esv_sdk/_hooks/types.py
-  - src/esv_sdk/_version.py
-  - src/esv_sdk/basesdk.py
-  - src/esv_sdk/httpclient.py
-  - src/esv_sdk/models/__init__.py
-  - src/esv_sdk/models/apierror.py
-  - src/esv_sdk/models/error.py
-  - src/esv_sdk/models/getpassageaudioop.py
-  - src/esv_sdk/models/getpassagehtmlop.py
-  - src/esv_sdk/models/getpassagetextop.py
-  - src/esv_sdk/models/passagemeta.py
-  - src/esv_sdk/models/passageresponse.py
-  - src/esv_sdk/models/searchpassagesop.py
-  - src/esv_sdk/models/security.py
-  - src/esv_sdk/passages.py
-  - src/esv_sdk/py.typed
-  - src/esv_sdk/sdk.py
-  - src/esv_sdk/sdkconfiguration.py
-  - src/esv_sdk/types/__init__.py
-  - src/esv_sdk/types/basemodel.py
-  - src/esv_sdk/utils/__init__.py
-  - src/esv_sdk/utils/annotations.py
-  - src/esv_sdk/utils/datetimes.py
-  - src/esv_sdk/utils/enums.py
-  - src/esv_sdk/utils/eventstreaming.py
-  - src/esv_sdk/utils/forms.py
-  - src/esv_sdk/utils/headers.py
-  - src/esv_sdk/utils/logger.py
-  - src/esv_sdk/utils/metadata.py
-  - src/esv_sdk/utils/queryparams.py
-  - src/esv_sdk/utils/requestbodies.py
-  - src/esv_sdk/utils/retries.py
-  - src/esv_sdk/utils/security.py
-  - src/esv_sdk/utils/serializers.py
-  - src/esv_sdk/utils/url.py
-  - src/esv_sdk/utils/values.py
+    globalServerURLs: 3.2.1
+    methodArguments: 1.1.1
+    nameOverrides: 3.0.3
+    pagination: 3.0.10
+    responseFormat: 1.1.0
+    retries: 3.0.7
+    sdkHooks: 1.3.0
+trackedFiles:
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:53134de3ada576f37c22276901e1b5b6d85cd2da
+    pristine_git_object: 4d75d59008e4d8609876d263419a9dc56c8d6f3a
+  .vscode/settings.json:
+    id: 89aa447020cd
+    last_write_checksum: sha1:f84632c81029fcdda8c3b0c768d02b836fc80526
+    pristine_git_object: 8d79f0abb72526f1fb34a4c03e5bba612c6ba2ae
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:45f739116b6b84da6b5bbb98e8ecdb005f800172
+    pristine_git_object: b63a8f1cf020831f6a8bac349b39c8c7702ea2a5
+  docs/models/error.md:
+    id: b96a6fb71e96
+    last_write_checksum: sha1:08508066a5d5946aee8ffd178c84d7b8308d444f
+    pristine_git_object: 665666b3619ed3ffffa7c8825b4e3fcc3ce90dcc
+  docs/models/getpassageaudiorequest.md:
+    id: a68e7411efba
+    last_write_checksum: sha1:ca65d9f28c1b79e6ea2faf158874f11b5ac3f263
+    pristine_git_object: aefcd243d1126206f9e848dec7018b4c2f38ef7d
+  docs/models/getpassagehtmlrequest.md:
+    id: 7e679eb47400
+    last_write_checksum: sha1:9bf9201ec488ed3f90bc4b75543e3870d4ec6cb4
+    pristine_git_object: a05a5014402fccc87d5e8a300cc9b3bfc000e966
+  docs/models/getpassagetextrequest.md:
+    id: 839f24592436
+    last_write_checksum: sha1:671eeb5e228bffd4edac352dead7779e5dc9bceb
+    pristine_git_object: ec5e5400954a320cae478fb103b06716387734fb
+  docs/models/indentusing.md:
+    id: 17a3ae011206
+    last_write_checksum: sha1:44369a206e0adf276042114202261728b344dd60
+    pristine_git_object: 9cca5a172272a6539a3ba929d74c9163599d9475
+  docs/models/passagemeta.md:
+    id: 4a2b38e7d50b
+    last_write_checksum: sha1:5c6d8a101afeb6cb18f73fc4a9ba77d6d86105d1
+    pristine_git_object: c7e67c68d27faa3f45660bcef70fd98591a7bced
+  docs/models/passageresponse.md:
+    id: fcf4c9cd5f4c
+    last_write_checksum: sha1:08863835b74320ae1c0a72037db6edaf6caa7875
+    pristine_git_object: 4f8b2d810070df62d44a326d84724120fea67869
+  docs/models/results.md:
+    id: c3a733d7c7d3
+    last_write_checksum: sha1:88cb6e1d17896c0c00a9ba2594b4e0a34d852066
+    pristine_git_object: 7665663a56382fc12e0dc717ece407c192658996
+  docs/models/searchpassagesrequest.md:
+    id: a6631dea0014
+    last_write_checksum: sha1:d1c105df6a433e9fc26f0c1c33eef77fcbca80ba
+    pristine_git_object: aa4466a89801d415653012ef7ffccc7e29ba70c2
+  docs/models/searchpassagesresponse.md:
+    id: a1f70c4c0a0f
+    last_write_checksum: sha1:01b1b7c301a10c8050e47144866cbcbfa6a1d717
+    pristine_git_object: 64b64a32a81562020856786d4be4857ae8daeb3f
+  docs/models/searchpassagesresponsebody.md:
+    id: d102ab96d2db
+    last_write_checksum: sha1:4d1243a154913fb41f19253ab57a0c6f3f09ac4d
+    pristine_git_object: a448004812fd76e12af9dc5a54143b5193f06881
+  docs/models/security.md:
+    id: 452e4d4eb67a
+    last_write_checksum: sha1:45b7b8881a6560a468153662d61b99605a492edf
+    pristine_git_object: 2e0839d06f821dd97780dc22f202dedf23e4efe1
+  docs/models/utils/retryconfig.md:
+    id: 4343ac43161c
+    last_write_checksum: sha1:562c0f21e308ad10c27f85f75704c15592c6929d
+    pristine_git_object: 69dd549ec7f5f885101d08dd502e25748183aebf
+  docs/models/verses.md:
+    id: 1230c5cbf173
+    last_write_checksum: sha1:1cd8325febbea267c41ec6906e13f23152ee1fc1
+    pristine_git_object: 8ed4d496d8f3d3dc2df47025e3efedd9bd347d4f
+  docs/sdks/passages/README.md:
+    id: 2f799cc05d18
+    last_write_checksum: sha1:45c08e08c85118046ca54914026d25bb4d3cf433
+    pristine_git_object: 23121f2786d5e420557c21d488074a5a6e4e5854
+  poetry.toml:
+    id: a81ade82122a
+    last_write_checksum: sha1:2242305e29dc6921bdf5b200aea5d4bf67830230
+    pristine_git_object: cd3492ac9dc870fdcf23dbd94fd1d40cc753cc8e
+  py.typed:
+    id: 258c3ed47ae4
+    last_write_checksum: sha1:8efc425ffe830805ffcc0f3055871bdcdc542c60
+    pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
+  pylintrc:
+    id: 7ce8b9f946e6
+    last_write_checksum: sha1:fc254fc871c3accee75f03e3f71307f7a894235b
+    pristine_git_object: fde5e0418e98324b2b3b2a8e02559e575b2f6cfa
+  pyproject.toml:
+    id: 5d07e7d72637
+    last_write_checksum: sha1:195916b70667623e03269480a7a9f9cfefa607f5
+    pristine_git_object: 67510d43a91f038db84d1e4ff662335c69f42c3c
+  scripts/prepare_readme.py:
+    id: e0c5957a6035
+    last_write_checksum: sha1:c068afb4df6d6b9105b4fd27f29e32171a21ca2c
+    pristine_git_object: 2f5f628b2ac14f5233ab391422fc0602ead4c019
+  scripts/publish.sh:
+    id: fe273b08f514
+    last_write_checksum: sha1:b31bafc19c15ab5ea925fdf8d5d4adce2b115a63
+    pristine_git_object: 2a3ead70ccc6228cbae1c5c8a319b1399f3804ea
+  src/esv_sdk/__init__.py:
+    id: dd76599c86ba
+    last_write_checksum: sha1:eec86b555287a1f966479167defba81fe37be83f
+    pristine_git_object: d028dd22db25a8dfa0f8c44641ceed256e9d9e46
+  src/esv_sdk/_hooks/__init__.py:
+    id: 5251b910db6c
+    last_write_checksum: sha1:e3111289afd28ad557c21d9e2f918caabfb7037d
+    pristine_git_object: 2ee66cdd592fe41731c24ddd407c8ca31c50aec1
+  src/esv_sdk/_hooks/sdkhooks.py:
+    id: 145200446eff
+    last_write_checksum: sha1:dd43445e46082cae12f2d7d06422151646abfbd1
+    pristine_git_object: 519f12d3d84561cee91d8e0f0794d37369c84ebe
+  src/esv_sdk/_hooks/types.py:
+    id: 6fcf4bc5a8a6
+    last_write_checksum: sha1:4fcf7a9800b83f7b0099fc16c5601cbbba1b03e5
+    pristine_git_object: 1e770e2cb420558810b099cb27c34288504fb21a
+  src/esv_sdk/_version.py:
+    id: bbd1c46058b7
+    last_write_checksum: sha1:c610369df486c3330b39eee2f54bc8501cfe8ea5
+    pristine_git_object: 3f186973332ab97ed049bf8545209c2c45cf90d5
+  src/esv_sdk/basesdk.py:
+    id: c79935a00c15
+    last_write_checksum: sha1:3ea4fcbbeb9c6b672d3974b80f0b213a51c16484
+    pristine_git_object: 51267e8435ce6e2c0689df944d2ab239c1b80d73
+  src/esv_sdk/httpclient.py:
+    id: 5362061df760
+    last_write_checksum: sha1:5e55338d6ee9f01ab648cad4380201a8a3da7dd7
+    pristine_git_object: 89560b566073785535643e694c112bedbd3db13d
+  src/esv_sdk/models/__init__.py:
+    id: 2a81948d7077
+    last_write_checksum: sha1:5a8e25d767e1280c30a8afa717dc838836a2c1c8
+    pristine_git_object: 52dca8c9afa1b40854f425d02953eaf2402ae818
+  src/esv_sdk/models/apierror.py:
+    id: c98f4b6872d6
+    last_write_checksum: sha1:3761bd7b1f50b084b5f3b0f6a593f675b5a009bb
+    pristine_git_object: 2945cc396ae5f3e39f984f27b14601de4838f057
+  src/esv_sdk/models/error.py:
+    id: a0788681a7a8
+    last_write_checksum: sha1:0ff46578b2f151b31fd4988ee105c769b60354a9
+    pristine_git_object: fe5bd5d44f9d5c29a417a089b9dab0488e85962a
+  src/esv_sdk/models/esverror.py:
+    id: 54628de2ebf3
+    last_write_checksum: sha1:eb233394de34a149906331404ed4defda78d9027
+    pristine_git_object: b680c7c2eb673a017abe51151a82b1cdca409960
+  src/esv_sdk/models/getpassageaudioop.py:
+    id: f871c14719d3
+    last_write_checksum: sha1:1d043021351616615faf0171cb1cd0db3a259ad0
+    pristine_git_object: e7629a83d5379a8bd0b76281bbdafa04131342d2
+  src/esv_sdk/models/getpassagehtmlop.py:
+    id: 6e7124229ecf
+    last_write_checksum: sha1:104d7984ea5215c9ae0e50c4bf3966203f0dc939
+    pristine_git_object: d31ea31a89f27f5d5390b970590bad3d622d5007
+  src/esv_sdk/models/getpassagetextop.py:
+    id: 4aec3adeaa54
+    last_write_checksum: sha1:8ddc0b2c10d5045bd0ab15c7c1ca2ace3bbdacfd
+    pristine_git_object: 81f2d766c5ccd07dfe0f40d89b3a28bfb88e218c
+  src/esv_sdk/models/no_response_error.py:
+    id: 913882452ce0
+    last_write_checksum: sha1:7f326424a7d5ae1bcd5c89a0d6b3dbda9138942f
+    pristine_git_object: 1deab64bc43e1e65bf3c412d326a4032ce342366
+  src/esv_sdk/models/passagemeta.py:
+    id: 05f7c36b046d
+    last_write_checksum: sha1:c74bc0aa9413721b997cfef4ea93f38ba8c9c8d0
+    pristine_git_object: 7674c8e963c2d3a7e84b0a1a04a125c310c1c8c4
+  src/esv_sdk/models/passageresponse.py:
+    id: 7a23cbab3322
+    last_write_checksum: sha1:9c27d5787eddadff102141d394dae3877ad8b172
+    pristine_git_object: 4dd11bc27fbf34da349ca47bb0e34bceb512b642
+  src/esv_sdk/models/responsevalidationerror.py:
+    id: 5b94feb4bdab
+    last_write_checksum: sha1:47e5b4235c898828e82273dd19fbdd0d683a7079
+    pristine_git_object: ede2dedceee80b7383e1daa42f565faf86289ea9
+  src/esv_sdk/models/searchpassagesop.py:
+    id: 499568f61314
+    last_write_checksum: sha1:a90da24721c4677d4f7525ece372786bf71dec2b
+    pristine_git_object: fc235a2ef45cd656f57e7c3b9c7b5c24542e4ff5
+  src/esv_sdk/models/security.py:
+    id: 128f68124bdf
+    last_write_checksum: sha1:274897e03aaf7b250141fab08e6314bff9ed5f9f
+    pristine_git_object: fc60a99d496da717be4dd48dfb871dfe9d514bfc
+  src/esv_sdk/passages.py:
+    id: adf838b63a5f
+    last_write_checksum: sha1:d30aaa5401ad6c974b27569b586be27fc22cfc80
+    pristine_git_object: 9605813fb07a2e4d4f827f32c97ce4aee1112994
+  src/esv_sdk/py.typed:
+    id: e7f438c9fd57
+    last_write_checksum: sha1:8efc425ffe830805ffcc0f3055871bdcdc542c60
+    pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
+  src/esv_sdk/sdk.py:
+    id: 7130f83c998f
+    last_write_checksum: sha1:74b8945fc0258b2fc9af60910f041bb470bc854a
+    pristine_git_object: 5a7844d711e6285511d4b9ce6223781e01372c68
+  src/esv_sdk/sdkconfiguration.py:
+    id: 98d39aaa17eb
+    last_write_checksum: sha1:151c87f563630651b99a503977a6638985f36502
+    pristine_git_object: 6f87861bc8304f1dce0eb39e99e264dbd7663d0f
+  src/esv_sdk/types/__init__.py:
+    id: 02ede94f04c3
+    last_write_checksum: sha1:f9ad14217f832e74f594285960125add50324be9
+    pristine_git_object: faa268137bc01c9d08cfadc4797017db48747a96
+  src/esv_sdk/types/base64fileinput.py:
+    id: 1bf9fe2aa58c
+    last_write_checksum: sha1:1522687ae3398374c35710cad993a6e82b5ab99d
+    pristine_git_object: 862566fe2b1db830276b390e136e65090e5963d2
+  src/esv_sdk/types/basemodel.py:
+    id: 6cc5a7a82285
+    last_write_checksum: sha1:10d84aedeb9d35edfdadf2c3020caa1d24d8b584
+    pristine_git_object: a9a640a1a7048736383f96c67c6290c86bf536ee
+  src/esv_sdk/utils/__init__.py:
+    id: 4c44b81fbb83
+    last_write_checksum: sha1:0f93d821f9cb3e061ea125d881bb6f61166738dd
+    pristine_git_object: aded7597c2bbc4e3fa7f555755d894671ac57741
+  src/esv_sdk/utils/annotations.py:
+    id: f4d5fdbd4af1
+    last_write_checksum: sha1:a4824ad65f730303e4e1e3ec1febf87b4eb46dbc
+    pristine_git_object: 12e0aa4f1151bb52474cc02e88397329b90703f6
+  src/esv_sdk/utils/datetimes.py:
+    id: b7de73903fba
+    last_write_checksum: sha1:c721e4123000e7dc61ec52b28a739439d9e17341
+    pristine_git_object: a6c52cd61bbe2d459046c940ce5e8c469f2f0664
+  src/esv_sdk/utils/dynamic_imports.py:
+    id: a3f0a67523a4
+    last_write_checksum: sha1:a1940c63feb8eddfd8026de53384baf5056d5dcc
+    pristine_git_object: 673edf82a97d0fea7295625d3e092ea369a36b79
+  src/esv_sdk/utils/enums.py:
+    id: 4a4782a78be9
+    last_write_checksum: sha1:bc8c3c1285ae09ba8a094ee5c3d9c7f41fa1284d
+    pristine_git_object: 3324e1bc2668c54c4d5f5a1a845675319757a828
+  src/esv_sdk/utils/eventstreaming.py:
+    id: 4a5b8b26811b
+    last_write_checksum: sha1:7d1dc68f8b48486ab646653aa05cc38752e1f912
+    pristine_git_object: a8d4fe5cc88d3c7337339e1b36a61bbf7ca8c4eb
+  src/esv_sdk/utils/forms.py:
+    id: f6602e996d18
+    last_write_checksum: sha1:a971cdb120ad3d416d296d5d0ad89e4808350a7f
+    pristine_git_object: fdf0dc9b2a67bca773eefe6b471498cccaa83424
+  src/esv_sdk/utils/headers.py:
+    id: 8e056954d794
+    last_write_checksum: sha1:7c6df233ee006332b566a8afa9ce9a245941d935
+    pristine_git_object: 37864cbbbc40d1a47112bbfdd3ba79568fc8818a
+  src/esv_sdk/utils/logger.py:
+    id: cbd4ec81595d
+    last_write_checksum: sha1:b2bb4540427a86bff2de82ecea5a2702895e4e8c
+    pristine_git_object: e314e58cd2bef7cb9fa9b5583dd06921695b26bd
+  src/esv_sdk/utils/metadata.py:
+    id: 5b157a5dfabb
+    last_write_checksum: sha1:e703e5cbb5255144aacf86898d1420529afaaff8
+    pristine_git_object: 5abddd588837ac297050ca3b543627faadb350a9
+  src/esv_sdk/utils/queryparams.py:
+    id: e8504b3d191f
+    last_write_checksum: sha1:b94c3f314fd3da0d1d215afc2731f48748e2aa59
+    pristine_git_object: c04e0db82b68eca041f2cb2614d748fbac80fd41
+  src/esv_sdk/utils/requestbodies.py:
+    id: "180470075116"
+    last_write_checksum: sha1:e1fef575283b7fe7fe2ad392dbbb3fb105309124
+    pristine_git_object: 591415af8e64baa410627b507d2740afb5387d13
+  src/esv_sdk/utils/retries.py:
+    id: 7b0c3a1f88f6
+    last_write_checksum: sha1:3585b891142f30a597fbf7a2f0340700babef8e4
+    pristine_git_object: ca7b59efebbbd9545744d0207ef42725c4cc5143
+  src/esv_sdk/utils/security.py:
+    id: 6c6b8b8f818d
+    last_write_checksum: sha1:a62e7b177906523c5b4360d046ee848709680b60
+    pristine_git_object: 7c2943538d7e3605258642a4f1d2aad0efd66bc7
+  src/esv_sdk/utils/serializers.py:
+    id: ec7e353c4d4f
+    last_write_checksum: sha1:7485f1425b0661fd84836186570df90207eec6af
+    pristine_git_object: 1031ed930bad5ece220cf7416a56c29f40f0588b
+  src/esv_sdk/utils/unmarshal_json_response.py:
+    id: 76dda8de8eaf
+    last_write_checksum: sha1:90207fe45a1185f0655b27d183266cda224abf80
+    pristine_git_object: 04886cc10d909fd517eaff907fcf38edacee8342
+  src/esv_sdk/utils/url.py:
+    id: 07c2aed01c6c
+    last_write_checksum: sha1:6479961baa90432ca25626f8e40a7bbc32e73b41
+    pristine_git_object: c78ccbae426ce6d385709d97ce0b1c2813ea2418
+  src/esv_sdk/utils/values.py:
+    id: 2d6b5289119f
+    last_write_checksum: sha1:acaa178a7c41ddd000f58cc691e4632d925b2553
+    pristine_git_object: dae01a44384ac3bc13ae07453a053bf6c898ebe3
 examples:
   getPassageHtml:
     StandardReference:
@@ -399,6 +614,15 @@ examples:
           audio/mpeg: "x-file: example.file"
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
+    speakeasy-default-get-passage-audio:
+      parameters:
+        query:
+          q: "<value>"
+      responses:
+        "200":
+          audio/mpeg: "x-file: example.file"
+        "400":
+          application/json: {"code": "<value>", "message": "<value>"}
   getPassageText:
     StandardReference:
       parameters:
@@ -654,3 +878,69 @@ examples:
           application/json: {"code": "<value>", "message": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+generatedFiles:
+  - .gitattributes
+  - .python-version
+  - .vscode/settings.json
+  - USAGE.md
+  - docs/models/error.md
+  - docs/models/getpassageaudiorequest.md
+  - docs/models/getpassagehtmlrequest.md
+  - docs/models/getpassagetextrequest.md
+  - docs/models/indentusing.md
+  - docs/models/passagemeta.md
+  - docs/models/passageresponse.md
+  - docs/models/results.md
+  - docs/models/searchpassagesrequest.md
+  - docs/models/searchpassagesresponse.md
+  - docs/models/searchpassagesresponsebody.md
+  - docs/models/security.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/verses.md
+  - docs/sdks/esv/README.md
+  - docs/sdks/passages/README.md
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/prepare_readme.py
+  - scripts/publish.sh
+  - src/esv_sdk/__init__.py
+  - src/esv_sdk/_hooks/__init__.py
+  - src/esv_sdk/_hooks/sdkhooks.py
+  - src/esv_sdk/_hooks/types.py
+  - src/esv_sdk/_version.py
+  - src/esv_sdk/basesdk.py
+  - src/esv_sdk/httpclient.py
+  - src/esv_sdk/models/__init__.py
+  - src/esv_sdk/models/apierror.py
+  - src/esv_sdk/models/error.py
+  - src/esv_sdk/models/getpassageaudioop.py
+  - src/esv_sdk/models/getpassagehtmlop.py
+  - src/esv_sdk/models/getpassagetextop.py
+  - src/esv_sdk/models/passagemeta.py
+  - src/esv_sdk/models/passageresponse.py
+  - src/esv_sdk/models/searchpassagesop.py
+  - src/esv_sdk/models/security.py
+  - src/esv_sdk/passages.py
+  - src/esv_sdk/py.typed
+  - src/esv_sdk/sdk.py
+  - src/esv_sdk/sdkconfiguration.py
+  - src/esv_sdk/types/__init__.py
+  - src/esv_sdk/types/basemodel.py
+  - src/esv_sdk/utils/__init__.py
+  - src/esv_sdk/utils/annotations.py
+  - src/esv_sdk/utils/datetimes.py
+  - src/esv_sdk/utils/enums.py
+  - src/esv_sdk/utils/eventstreaming.py
+  - src/esv_sdk/utils/forms.py
+  - src/esv_sdk/utils/headers.py
+  - src/esv_sdk/utils/logger.py
+  - src/esv_sdk/utils/metadata.py
+  - src/esv_sdk/utils/queryparams.py
+  - src/esv_sdk/utils/requestbodies.py
+  - src/esv_sdk/utils/retries.py
+  - src/esv_sdk/utils/security.py
+  - src/esv_sdk/utils/serializers.py
+  - src/esv_sdk/utils/url.py
+  - src/esv_sdk/utils/values.py
