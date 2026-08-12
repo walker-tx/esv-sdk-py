@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
-from esv_sdk.types import BaseModel
+from esv_sdk.types import BaseModel, UNSET_SENTINEL
 from esv_sdk.utils import FieldMetadata, QueryParamMetadata
 import pydantic
+from pydantic import model_serializer
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 
@@ -199,3 +200,41 @@ class GetPassageTextRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = 0
     r"""Maximum line length"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "include-passage-references",
+                "include-verse-numbers",
+                "include-first-verse-numbers",
+                "include-footnotes",
+                "include-footnote-body",
+                "include-headings",
+                "include-short-copyright",
+                "include-copyright",
+                "include-passage-horizontal-lines",
+                "include-heading-horizontal-lines",
+                "horizontal-line-length",
+                "include-selahs",
+                "indent-using",
+                "indent-paragraphs",
+                "indent-poetry",
+                "indent-poetry-lines",
+                "indent-declares",
+                "indent-psalm-doxology",
+                "line-length",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k, serialized.get(n))
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
